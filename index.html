@@ -1,0 +1,302 @@
+<!DOCTYPE html> 
+<html>
+<head>
+<meta charset="utf-8">
+<title>Aplic. Web de jQuery Mobile</title>
+<link href="jquery.mobile-1.0.min.css" rel="stylesheet" type="text/css"/>
+<script src="jquery-1.6.4.min.js" type="text/javascript"></script>
+<script src="jquery.mobile-1.0.min.js" type="text/javascript"></script>
+<script>
+function nombre(){
+	var nom;
+	var can;
+	var anc;
+	var Cat;
+	var may;
+	nom=document.getElementById("txtnom").value;
+	
+	may=nom.toUpperCase();
+	document.getElementById("txtnom").value=may;
+	anc=may.length;
+	for(x=0; x<=anc-1; x++){
+		Cat=may.charAt(x);
+	if(((Cat>='A') && (Cat<='Z')) || (Cat==' ')){
+		}else{
+			alert("Se introdujo un carácter incorrecto(numérico)");
+				break;
+			}
+		}
+	}
+function Em(){
+	var Em, y, p, t, a, i;
+Em=document.getElementById("txtEm").value;
+	if(((Em.charAt(0)>='0')&&(Em.charAt(0)<='9'))||(Em.charAt(0)=='@'))
+	{
+			alert("Primer carácter inválido");
+		}
+	else
+	{
+		p=Em.indexOf('@');
+		t=Em.lastIndexOf('@');
+		if(p!=t){
+			alert("Solo introduce un @");
+		}
+		else{
+			if((p==-1)&&(t==-1))
+			{
+			alert("Introduce un @");	
+				}
+				else{
+					a=Em.indexOf('.');
+					i=Em.lastIndexOf('.');
+	          if(a!=i)
+			  {
+				  alert("Solo se acepta un punto");
+			  }
+			  else{
+				  if((a==-1)&&(i==-1)){
+					  alert("Introduce un punto");
+					  }
+			  }
+					}
+			}
+	}		
+
+}
+function Tel(){
+	var nom;
+	var can;
+	var anc;
+	var Cat;
+	nom=document.getElementById("txtTel").value;
+	anc=nom.length;
+	for(x=0; x<=anc-1; x++){
+		Cat=nom.charAt(x);
+	if(((Cat>=0) && (Cat<=9 ))|| (Cat=='-')){
+		}else{
+			alert("Se introdujo un carácter incorrecto(Letra)");
+				break;
+			}
+		}
+	}
+function Asu(){
+	var nom;
+	nom=document.getElementById("txtAsun").value;
+	var may;
+	may=nom.toUpperCase();
+	document.getElementById("txtAsun").value=may;
+	}
+	function Sug(){
+	var nom;
+	nom=document.getElementById("txtSug").value;
+	var se=document.getElementById("txtSu").value;
+	if(nom==se || se==""){
+		}else{
+			alert("Cifra incorrecta");
+			}
+	}
+function enviar(){
+	var nom;
+	var Em;
+	var	Tel;
+	var Asu;
+	var Sug;
+	var no;
+	var se
+	no=document.getElementById("txtSug").value;
+	se=document.getElementById("txtSu").value;
+	nom=document.getElementById("txtnom").value;
+	Em=document.getElementById("txtEm").value;
+	Tel=document.getElementById("txtTel").value;
+	Asu=document.getElementById("txtAsun").value;
+	Sug=document.getElementById("txtSug").value;
+	if(no!=se){
+		alert("Cifra de seguridad incorrecta");
+		}else{
+	if(nom=="" || Em=="" || Tel=="" || Asu=="" || Sug==""){
+		alert("Datos incompletos");
+		}else{
+			alert("Mensaje enviado");
+			document.getElementById("txtnom").value="";
+			document.getElementById("txtEm").value="";
+			document.getElementById("txtTel").value="";
+			document.getElementById("txtAsun").value="";
+			document.getElementById("txtSu").value="";
+			}
+}
+}
+</script>
+</head> 
+<body> 
+
+<div data-role="page" id="page">
+	<div data-role="header">
+		<h1>Lee y Diviértete con aslan</h1>
+	</div>
+	<div data-role="content">	
+		<ul data-role="listview">
+			<li><a href="#page2">Inicio</a></li>
+            <li><a href="#page3">Servicios o Productos</a></li>
+            <li><a href="#page4">Equipo</a></li>
+            <li><a href="#page5">Contáctanos</a></li>         <center> <img src="img/saga-completa-las-cronicas-de-narnia-c-s-lewis-7-libros-11951-MLM20052610131_022014-O.jpg" width="50%" height="20%"></center>
+        </ul>		
+	</div>
+	<div data-role="footer">
+		<h4>Lle3yi1tt@</h4>
+	</div>
+</div>
+
+<div data-role="page" id="page2">
+	<div data-role="header">
+		<h1>¿Quiénes  somos?</h1>
+       
+	</div>
+	<div data-role="content">	
+    <center><h1>La mejor colección  </h1></center>
+    <h3>MISIÓN.</h3>
+				 Brindar a los niños y niñas de todas las edades una atención pedagógica congruente con las características propias de la edad y programa vigente, mediante oportunidades de aprendizaje en un ambiente distinto al familiar y  contribuyendo al desarrollo de todas sus potencialidades; haciendo énfasis en las competencias  cognitivas, socio-afectivas y de lenguaje de los niñas y las niñas que cursan este nivel educativo.
+     <h3>VISIÓN.</h3>        
+         Ser una librería  comprometida con la tarea de democratizar las oportunidades educativas,  atendiendo y brindando  especial influencia positiva a los niños y niñas en situación  de riesgo y con necesidades educativas especiales, mediante el desarrollo de competencias intelectuales con capacidad de aprender permanentemente, así como en la formación de valores y actitudes que les permitan avanzar hacia el desarrollo de competencias para la vida.
+     <h3>VALORES.</h3>
+          Por lo que todos trabajamos muy fuerte para así los niños tengan un buen libro y tengan algo en lo cual entretenerse y no hacer cosas  indebidas.
+    <center><img src="img/DSC03846.JPG" width="60%" height="20%"></center> </div>
+    <div data-role="footer">
+		<h4>CRONICAS DE NARNIA</h4>
+	</div>
+</div>
+
+<div data-role="page" id="page3">
+	<div data-role="header">
+		<h1>Producto</h1>
+	</div>
+	<div data-role="content">	
+     <center><h3>El Sobrino del Mago </h3>
+ <img src="img/img.jpg" width="142" height="200"></center> Editorial Planeta Destino. A partir de 11 años. 256 págs.
+Digory, que más tarde será conocido como el célebre doctor Kirke, y Polly, su vecina, mediante unos anillos mágicos del tío de Diggory llegará a otros misteriosos mundos e inconscientemente llevarán de vuelta a Londres a una malvada bruja que intentará apoderarse del mundo. Y, además, asistirán a la creación de Narnia por el mágico león Aslan. Pero la malvada bruja Jadis, sedienta de poder, quiere apoderarse del mundo en el que se encuentra...<br>
+     <center><h3>El león, la bruja y el armario  </h3>
+ <img src="img/img1.jpg" width="142" height="200"></center> Editorial Planeta, Destino. A partir de 11 años. 240 págs. Peter, Edmund, Susan y Lucy son evacuados en la Segunda Guerra Mundial a la casa del profesor Kirke. Lucy, explorando la casa descubre que a través de un armario puede llegar a Narnia. Más tarde Edmund descubre también como llegar a Narnia a través del armario y conoce a una misteriosa mujer, la Bruja Blanca que muy amablemente le ofrece unas delicias turcas y le invita a ir a su castillo. Y cuando en otra ocasión los cuatro van a Narnia, Edmund se escapa al palacio de la bruja y Peter, Susan y Lucy se tendrán que enfrentar a la Bruja. <br> 
+ <center><h3>El Caballo y el Muchacho</h3>
+ <img src="img/img2.jpg" width="142" height="200"></center> Editorial Planeta, Destino. A partir de 11 años.280 págs.
+Shasta vive casi como un esclavo trabajando para un pobre pescador de Calormen, el reino vecino de Narnia. Un día llega un tarkaan a la casa del pescador, Shasta les escucha a escondidas y descubre que el tarkaan le quiere comprar para llevárselo como esclavo. Descubre que el caballo del tarkaan es un animal parlante que intenta, como Shasta, escapar a Narnia. Juntos emprenderán un largo viaje hasta Narnia, la tierra donde todo puede suceder. Más tarde se encontrarán con otros fugitivos, la tarkina Arabís y su yegua parlante Hwin que también huyen a Narnia.
+
+ <br> 
+  <center><h3>El Príncipe Caspian</h3>
+ <img src="img/img3.jpg" width="142" height="200"></center> Editorial Planeta, Destino. A partir de 11 años. 281 págs.
+Los telmarinos han invadido Narnia y el despiadado rey Miras controla el país mientras Caspian no sea mayor de edad. Los animales parlantes, centauros, los gigantes, los enanos y todas las criaturas mágicas de Narnia viven escondidas en los bosques. El príncipe Caspian, heredero al trono añora los viejos tiempos en Narnia y cuando Miras tiene un hijo se ve obligado a abandonar el castillo y huir a los bosques para encontrar a los viejos narnianos. Cuando se ve en peligro toca el cuerno de la reina Susan y Peter, Edmund, Susan y Lucy vuelven a Narnia para restaurar el orden en el país y poner a Caspian como rey.
+
+<br>
+  <center><h3>La travesía del viajero del alba</h3>
+ <img src="img/img4.jpg" width="142" height="200"></center> Edmund y Lucy están en casa de su detestable primo Eustace pensando que van a pasar las peores vacaciones de su vida cuando observando el cuadro de un barco en una tempestad vuelven a Narnia (Eustace también) a bordo del Viajero del Alba.
+En el barco se encontrarán con Caspian y Reepicheep que intentan encontrar a los siete lores amigos del padre de Caspian que fueron exiliados de Narnia cuando el rey Miraz ocupó el trono. Además intentarán descubrir qué hay más allá de las Islas Solitarias, las últimas islas ocupadas por los narnianos. 
+Tiene algunos momentos un poco aburridos y puede parecer un poco repetitivo. Sorprendentes los últimos tres capítulos.
+<br>
+  <center><h3>La Silla de Plata</h3>
+ <img src="img/img5.jpg" width="142" height="200"></center> Editorial Planeta, Destino. A partir de 11 años. 304 págs.
+ Jill Pole y Eustace Scrubb llegarán a Narnia para cumplir la misión encomendada por Aslan: encontrar al hijo del ya envejecido rey Caspian. Para ello necesitarán visitar Harfang, la ciudad en ruinas de los gigantes y, siguiendo las instrucciones de Aslan, encontrarán al príncipe. Un habitante de las marismas, Charcosombrío, les ayudará a llegar a la ciudad de los gigantes. Al final, se encontrarán con los gigantes que les acogerán en su castillo. Después descubrirán los peligros de la Tierra Inferior, de su Reína y de sus habitantes los Terranos.
+<br>
+<center><h3>La Última Batalla</h3>
+ <img src="img/img6.jpg" width="142" height="200"></center> Triquiñuela, un mono parlante, y Puzzle, un asno parlante también, viven al oeste del Erial del Farol en una zona casi desierta. Cuando encuentran una piel de un león muerto en el río, deciden que Puzzle se hará pasar por Aslan y así todos le obedecerán. Con la ayuda del falso Aslan, los calormenos cortan los árboles parlantes asesinando a las dríades. Triquiñuela impone sus leyes en toda Narnia y vende a los animales parlantes a los calormenos. El rey Tirian recibe la ayuda de Jill y Eustace, juntos intentarán devolver Narnia a la normalidad.<br>
+Un gran final para una gran colección.
+<br></div>
+	<div data-role="footer">
+		<h4>CRONICAS DE NARNIA</h4>
+	</div>
+</div>
+<div data-role="page" id="page4">
+	<div data-role="header">
+		<h1>Equipo</h1>
+        
+	</div>
+	<div data-role="content">	
+    <center>
+    <img src="img/2013-10-07 16.31.41.jpg" width="30%" height="40%">
+    </center></div><p>
+    <h2>IRELIA RUIZ ARENAS</h2>Tiene la edad de 16 años, su color favorito es el morado y le gusta jugar futbol, estudia actualmente en la preparatoria de CBTis 184.<br>
+    <center>
+      <img src="img/ewe.jpg" width="30%" height="40%">
+      <h2>REYNA ESMERALDA BRAVO REGALADO</h2>Tiene la edad de 16 años, su color favorito es el morado y le gusta jugar futbol, su artista favorito es DEMI LOVATO. Estudia actualmente en la preparatoria de CBTis 184.
+  <div data-role="footer">
+		<h4>CRONICAS DE NARNIA</h4>
+	</div>
+</div>
+<div data-role="page" id="page5">
+	<div data-role="header">
+		<h1>Contáctanos</h1>
+	</div>
+	<div data-role="content">	
+		<table>
+  <tr>
+    <td><label for="textinput"><b>Dirección:</b> "Izucar de Matamosros Pue. colonia centro calle allende N°56"  </label>
+		  </td>
+  </tr>
+  <tr>
+      <td><label for="textinput"><b>Correo electrónico:</b> "cronic_narnia2508@hotmail.com"</label>
+		  </td>
+  </tr>
+  <tr>
+    <td><label for="textinput"><b>Teléfono:</b> "244-103-56-67"</label>
+		  </td>
+  </tr>
+  
+</table>
+      <center> <img src="img/uvicacion.png" width="60%" height="30%"></center>
+      <h1>Formulario</h1>
+ <table>
+  <tr>
+    <td>
+      <label for="textinput">Nombre</label>
+      </td>
+    <td><input type="text" name="nom" id="txtnom" value="" Onblur="nombre()" /></td>
+  </tr>
+  <tr>
+    <td>
+      <label for="textinput">Email</label>
+      </td>
+    <td><input type="text" name="Em" id="txtEm" value="" OnBlur="Em()" /></td>
+  </tr>
+     <tr>
+    <td>
+      <label for="textinput">Teléfono</label>
+      </td>
+    <td><input type="text" name="tel" id="txtTel" value="" OnBlur="Tel()"/></td>
+  </tr>
+ <tr>
+    <td>
+      <label for="textinput">Asunto</label>
+      </td>
+    <td>
+        <textarea cols="40" rows="8"  name="Asun" id="txtAsun" value="" OnBlur="Asu()"  ></textarea>
+        </td>
+  </tr>
+   <tr>
+    <td>
+      <label for="textinput">Seguridad</label>
+      </td>
+    <td>
+<table >
+  <tr>
+    <td><input type="text" name="Sug" id="txtSug" value="567" OnBlur="Sug()" disabled="disabled"  /></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td><input type="text" name="Su" id="txtSu" value="" OnBlur="Sug()"/></td>
+  </tr>
+</table>
+
+     </td>
+  </tr>
+  <tr>
+<td colspan="2"><input type="button" id="Envi" value="Enviar" onClick="enviar()"></td>
+  </tr>
+    		</table>
+  </tr>
+  
+</table>
+      
+		 </div>
+	<div data-role="footer">
+		<h4>CRONICAS DE NARNIA</h4>
+	</div>
+</div>
+</body>
+</html>
